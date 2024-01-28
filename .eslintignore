@@ -1,0 +1,14 @@
+*.md
+*rc.js
+*config.js
+*.html
+*.yaml
+*.tmx
+*.png
+*.tps
+*.tiled-*
+*.ico
+*~
+
+node_modules
+dist

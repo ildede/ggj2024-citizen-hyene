@@ -1,0 +1,42 @@
+{
+    "name": "phaser-template",
+    "version": "0.0.1",
+    "description": "Project for Global Game Jam 2024",
+    "author": "Davide Pedron <davide@pedron.dev>",
+    "license": "MIT",
+    "scripts": {
+        "watch": "parcel src/index.html",
+        "build": "parcel build src/index.html",
+        "lint:check": "eslint '**'",
+        "lint:format": "eslint --fix '**' && prettier  --log-level warn --write \"./**/*.{js,ts,md,json}\"",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "phaser": "^3.70.0"
+    },
+    "devDependencies": {
+        "@parcel/config-default": "^2.11.0",
+        "@tsconfig/recommended": "^1.0.3",
+        "@types/node": "^20.11.5",
+        "@typescript-eslint/eslint-plugin": "^6.19.0",
+        "@typescript-eslint/parser": "^6.19.0",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.1.3",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.0",
+        "parcel": "^2.11.0",
+        "parcel-reporter-static-files-copy": "^1.5.3",
+        "prettier": "3.2.4",
+        "process": "^0.11.10",
+        "typescript": "^5.3.3",
+        "tslib": "^2.6.2"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "allowedVersions": {
+                "svgo": "2.8.0"
+            }
+        }
+    }
+}

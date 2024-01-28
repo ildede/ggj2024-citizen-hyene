@@ -1,0 +1,370 @@
+{
+    "textures": [
+        {
+            "image": "animations.png",
+            "format": "RGBA8888",
+            "size": {
+                "w": 946,
+                "h": 993
+            },
+            "scale": 1,
+            "frames": [
+                {
+                    "filename": "manhole/water1.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 330,
+                        "h": 602
+                    },
+                    "spriteSourceSize": {
+                        "x": 7,
+                        "y": 19,
+                        "w": 305,
+                        "h": 564
+                    },
+                    "frame": {
+                        "x": 1,
+                        "y": 1,
+                        "w": 305,
+                        "h": 564
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/simple.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 329,
+                        "h": 225
+                    },
+                    "spriteSourceSize": {
+                        "x": 1,
+                        "y": 3,
+                        "w": 325,
+                        "h": 222
+                    },
+                    "frame": {
+                        "x": 1,
+                        "y": 567,
+                        "w": 325,
+                        "h": 222
+                    },
+                    "anchor": {
+                        "x": 0.498576,
+                        "y": 0.881041
+                    }
+                },
+                {
+                    "filename": "manhole/water2.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 330,
+                        "h": 602
+                    },
+                    "spriteSourceSize": {
+                        "x": 0,
+                        "y": 23,
+                        "w": 293,
+                        "h": 564
+                    },
+                    "frame": {
+                        "x": 308,
+                        "y": 1,
+                        "w": 293,
+                        "h": 564
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/laugh3.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 302,
+                        "h": 239
+                    },
+                    "spriteSourceSize": {
+                        "x": 76,
+                        "y": 37,
+                        "w": 226,
+                        "h": 201
+                    },
+                    "frame": {
+                        "x": 1,
+                        "y": 791,
+                        "w": 226,
+                        "h": 201
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/idle1.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 329,
+                        "h": 225
+                    },
+                    "spriteSourceSize": {
+                        "x": 1,
+                        "y": 23,
+                        "w": 325,
+                        "h": 202
+                    },
+                    "frame": {
+                        "x": 603,
+                        "y": 1,
+                        "w": 325,
+                        "h": 202
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/walk1.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 329,
+                        "h": 225
+                    },
+                    "spriteSourceSize": {
+                        "x": 1,
+                        "y": 23,
+                        "w": 325,
+                        "h": 202
+                    },
+                    "frame": {
+                        "x": 603,
+                        "y": 205,
+                        "w": 325,
+                        "h": 202
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/face3.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 329,
+                        "h": 225
+                    },
+                    "spriteSourceSize": {
+                        "x": 190,
+                        "y": 0,
+                        "w": 139,
+                        "h": 141
+                    },
+                    "frame": {
+                        "x": 229,
+                        "y": 791,
+                        "w": 139,
+                        "h": 141
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/laugh2.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 302,
+                        "h": 239
+                    },
+                    "spriteSourceSize": {
+                        "x": 50,
+                        "y": 26,
+                        "w": 246,
+                        "h": 212
+                    },
+                    "frame": {
+                        "x": 328,
+                        "y": 567,
+                        "w": 246,
+                        "h": 212
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/laugh1.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 302,
+                        "h": 239
+                    },
+                    "spriteSourceSize": {
+                        "x": 0,
+                        "y": 31,
+                        "w": 277,
+                        "h": 207
+                    },
+                    "frame": {
+                        "x": 370,
+                        "y": 781,
+                        "w": 277,
+                        "h": 207
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/laugh4.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 302,
+                        "h": 239
+                    },
+                    "spriteSourceSize": {
+                        "x": 50,
+                        "y": 26,
+                        "w": 246,
+                        "h": 212
+                    },
+                    "frame": {
+                        "x": 576,
+                        "y": 567,
+                        "w": 246,
+                        "h": 212
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/walk2.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 329,
+                        "h": 225
+                    },
+                    "spriteSourceSize": {
+                        "x": 1,
+                        "y": 23,
+                        "w": 276,
+                        "h": 202
+                    },
+                    "frame": {
+                        "x": 649,
+                        "y": 781,
+                        "w": 276,
+                        "h": 202
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/face2.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 329,
+                        "h": 225
+                    },
+                    "spriteSourceSize": {
+                        "x": 206,
+                        "y": 0,
+                        "w": 121,
+                        "h": 113
+                    },
+                    "frame": {
+                        "x": 824,
+                        "y": 409,
+                        "w": 121,
+                        "h": 113
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "manhole/idle.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 330,
+                        "h": 602
+                    },
+                    "spriteSourceSize": {
+                        "x": 65,
+                        "y": 489,
+                        "w": 194,
+                        "h": 93
+                    },
+                    "frame": {
+                        "x": 603,
+                        "y": 409,
+                        "w": 194,
+                        "h": 93
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "filename": "hyena/face1.png",
+                    "rotated": false,
+                    "trimmed": true,
+                    "sourceSize": {
+                        "w": 329,
+                        "h": 225
+                    },
+                    "spriteSourceSize": {
+                        "x": 236,
+                        "y": 2,
+                        "w": 93,
+                        "h": 105
+                    },
+                    "frame": {
+                        "x": 824,
+                        "y": 524,
+                        "w": 93,
+                        "h": 105
+                    },
+                    "anchor": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "https://www.codeandweb.com/texturepacker",
+        "version": "3.0",
+        "smartupdate": "$TexturePacker:SmartUpdate:5d05969c86da1860449e6fc4c10959ba:0ec0e0fbdea21cd0914571ef52a3fcc1:bb447c4d1c842b0fc77df58e34d69c1d$"
+    }
+}

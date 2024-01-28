@@ -1,0 +1,9 @@
+{
+    "extends": "@tsconfig/recommended/tsconfig.json",
+    "compilerOptions": {
+        "importHelpers": true,
+        "sourceMap": true,
+        "baseUrl": "./src",
+    },
+    "include": ["src/**/*"],
+}
