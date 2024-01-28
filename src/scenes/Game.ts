@@ -51,8 +51,8 @@ export default class Game extends Phaser.Scene {
         this.load.image('pig', 'assets/pig.png');
         this.load.image('possum', 'assets/possum.png');
 
-        //this.load.image(GarbageName, 'assets/garbage_ok.png');
-        //this.load.image(`${GarbageName}-off`, 'assets/garbage_ko.png');
+        this.load.image(GarbageName, 'assets/trashcan_on.png');
+        this.load.image(`${GarbageName}-off`, 'assets/trashcan_off.png');
 
         this.load.image('background', 'assets/background.png');
     }

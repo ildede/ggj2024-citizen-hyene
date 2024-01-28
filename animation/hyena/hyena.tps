@@ -226,6 +226,23 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../jack/jack_off.png</key>
+            <key type="filename">../jack/jack_on1.png</key>
+            <key type="filename">../jack/jack_on2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.498576,0.881041</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>107,154,215,307</rect>
+                <key>scale9Paddings</key>
+                <rect>107,154,215,307</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../manhole/idle.png</key>
             <key type="filename">../manhole/water1.png</key>
             <key type="filename">../manhole/water2.png</key>
@@ -252,6 +269,7 @@
                 <array>
                     <filename>.</filename>
                     <filename>../manhole</filename>
+                    <filename>../jack</filename>
                 </array>
             </struct>
         </map>

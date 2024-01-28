@@ -33,7 +33,8 @@ class GarbageController implements Controller {
         }
         events.off(`${GarbageName}-${GameEvents.hit}`, this.handleHit, this);
 
-        this.sprite = sprite.setRotation(-250);
+        this.sprite = sprite.setTexture(`${GarbageName}-off`);
+        this.sprite.setY(this.sprite.y + 35);
         this.sprite.setData('entropy', 0);
         this.stateMachine.setState('dead');
     }

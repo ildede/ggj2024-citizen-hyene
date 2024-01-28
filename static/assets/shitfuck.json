@@ -599,6 +599,17 @@
                  "width":165,
                  "x":5890.65436241611,
                  "y":566.778523489933
+                }, 
+                {
+                 "height":300,
+                 "id":11,
+                 "name":"garbage",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":165,
+                 "x":5262.46644295302,
+                 "y":550.671140939597
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -607,7 +618,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":11,
+ "nextobjectid":12,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
