@@ -110,6 +110,7 @@ export default class Game extends Phaser.Scene {
 
                     this.playerController = new PlayerController(this, this.player, head, this.cursors);
 
+                    this.cameras.main.setBounds(0, 0, tileLayer1.width, tileLayer1.height);
                     this.cameras.main.startFollow(this.player, true);
                     break;
                 }
