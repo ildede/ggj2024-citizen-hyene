@@ -39,7 +39,7 @@ export default class SplashScreen extends Phaser.Scene {
         });
         sprite.play('neon');
 
-        const button = this.add.image(width / 3 + sprite.width / 1.15, height / 2 + sprite.height / 6, 'start_screen', 'button.png');
+        const button = this.add.image(width / 3 + sprite.width, height / 2 + sprite.height / 7, 'start_screen', 'button.png');
         button.setInteractive();
         button.on('pointerdown', () => {
             const webAudioSound = this.sound.add(`bgm`);
