@@ -3,6 +3,7 @@ import StateMachine from '../statemachine/StateMachine';
 import { GameEvents, eventEmitter } from './EventCenter';
 import { GarbageName } from './GarbageController';
 import { WaterName } from './Water';
+import { JackName } from './Jack';
 
 type CursorKeys = Phaser.Types.Input.Keyboard.CursorKeys;
 
@@ -47,6 +48,9 @@ export default class PlayerController {
                 onEnter: this.objectHitOnEnter,
             })
             .addState(`${WaterName}-${GameEvents.hit}`, {
+                onEnter: this.objectHitOnEnter,
+            })
+            .addState(`${JackName}-${GameEvents.hit}`, {
                 onEnter: this.objectHitOnEnter,
             })
             .addState(`pig-${GameEvents.hit}`, {

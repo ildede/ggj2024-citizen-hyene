@@ -5,6 +5,7 @@ import { EnemyController } from './EnemyController';
 import { FoodController } from './Food';
 import Controller from '../Controller';
 import { WaterController } from './Water';
+import { JackController } from './Jack';
 
 const SCENE_NAME = 'game';
 
@@ -159,6 +160,18 @@ export default class Game extends Phaser.Scene {
                     element.setData('element', name);
                     element.setData('entropy', 10);
                     this.elements.push(new WaterController(this, element));
+                    break;
+                }
+                case 'jack': {
+                    const element = this.matter.add.sprite(x, y, 'animations', 'jack/jack_off.png', {
+                        isStatic: true,
+                        isSensor: true,
+                    });
+
+                    element.setData('type', 'static');
+                    element.setData('element', name);
+                    element.setData('entropy', 10);
+                    this.elements.push(new JackController(this, element));
                     break;
                 }
             }
