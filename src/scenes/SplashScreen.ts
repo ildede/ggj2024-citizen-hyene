@@ -17,6 +17,7 @@ export default class SplashScreen extends Phaser.Scene {
         this.load.atlas('start_screen', 'assets/start_screen.png', 'assets/start_screen.json');
 
         this.load.image('background', 'assets/background.png');
+        this.load.audio('bgm', 'assets/bgm.mp3');
     }
     create() {
         console.log(`[${SCENE_NAME}] create`);
@@ -40,7 +41,11 @@ export default class SplashScreen extends Phaser.Scene {
 
         const button = this.add.image(width / 3 + sprite.width / 1.15, height / 2 + sprite.height / 6, 'start_screen', 'button.png');
         button.setInteractive();
-        button.on('pointerdown', () => this.scene.start('game'));
+        button.on('pointerdown', () => {
+            const webAudioSound = this.sound.add(`bgm`);
+            webAudioSound.play({ mute: false, loop: true });
+            this.scene.start('game');
+        });
     }
 
     destroy() {
