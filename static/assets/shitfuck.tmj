@@ -618,6 +618,61 @@
                  "width":165,
                  "x":5262.46644295302,
                  "y":550.671140939597
+                }, 
+                {
+                 "height":100,
+                 "id":12,
+                 "name":"gas_red",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":100,
+                 "x":1375.97638510445,
+                 "y":526.748410535876
+                }, 
+                {
+                 "height":100,
+                 "id":13,
+                 "name":"gas_green",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":100,
+                 "x":1026.29427792915,
+                 "y":526.748410535876
+                }, 
+                {
+                 "height":100,
+                 "id":14,
+                 "name":"coffee",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":100,
+                 "x":740.190735694823,
+                 "y":531.289736603088
+                }, 
+                {
+                 "height":100,
+                 "id":15,
+                 "name":"pill",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":100,
+                 "x":1989.05540417802,
+                 "y":531.289736603088
+                }, 
+                {
+                 "height":100,
+                 "id":16,
+                 "name":"roller",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":100,
+                 "x":2297.86557674841,
+                 "y":549.455040871935
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -626,7 +681,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":12,
+ "nextobjectid":17,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

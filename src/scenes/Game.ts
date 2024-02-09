@@ -48,6 +48,11 @@ export default class Game extends Phaser.Scene {
         this.load.image('oil', 'assets/oil.png');
         this.load.image('the', 'assets/the.png');
         this.load.image('banana', 'assets/banana.png');
+        this.load.image('coffee', 'assets/coffee.png');
+        this.load.image('gas_green', 'assets/gas_green.png');
+        this.load.image('gas_red', 'assets/gas_red.png');
+        this.load.image('pill', 'assets/pill.png');
+        this.load.image('roller', 'assets/roller.png');
         this.load.image('pig', 'assets/pig.png');
         this.load.image('possum', 'assets/possum.png');
 
@@ -147,9 +152,34 @@ export default class Game extends Phaser.Scene {
                     this.elements.push(new FoodController(this, food, 'the'));
                     break;
                 }
+                case 'coffee': {
+                    const food = this.createStaticElement('coffee', x, y, 5);
+                    this.elements.push(new FoodController(this, food, 'coffee'));
+                    break;
+                }
+                case 'gas_green': {
+                    const food = this.createStaticElement('gas_green', x, y, -10);
+                    this.elements.push(new FoodController(this, food, 'gas_green'));
+                    break;
+                }
+                case 'gas_red': {
+                    const food = this.createStaticElement('gas_red', x, y, 10);
+                    this.elements.push(new FoodController(this, food, 'gas_red'));
+                    break;
+                }
+                case 'pill': {
+                    const food = this.createStaticElement('pill', x, y, 15);
+                    this.elements.push(new FoodController(this, food, 'pill'));
+                    break;
+                }
                 case 'banana': {
                     const food = this.createStaticElement('banana', x, y, 10);
                     this.elements.push(new FoodController(this, food, 'banana'));
+                    break;
+                }
+                case 'roller': {
+                    const food = this.createStaticElement('roller', x, y, 10);
+                    this.elements.push(new FoodController(this, food, 'roller'));
                     break;
                 }
                 case 'water': {

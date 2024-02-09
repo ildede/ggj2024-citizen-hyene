@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "static/assets/shitfuck.tmj",
     "expandedProjectPaths": [
-        ".",
         "static/assets",
-        "static"
+        "static",
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -61,13 +61,16 @@
             "scale": 0.2202,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 1167.120799273388,
-                "y": 224.79564032697544
+                "x": 2041.3260672116255,
+                "y": 583.5603996366938
             }
         },
         "static/assets/shitfuck.tmj#Spritesheet": {
             "scaleInDock": 0.33,
             "scaleInEditor": 1
+        },
+        "static/assets/shitfuck.tmj#end": {
+            "scaleInDock": 1
         },
         "static/assets/shitfuck.tmj#foreground_floor": {
             "scaleInDock": 0.33,
@@ -76,6 +79,9 @@
         "static/assets/shitfuck.tmj#sptiyrshrry hyrsy": {
             "scaleInDock": 0.33,
             "scaleInEditor": 1
+        },
+        "static/assets/shitfuck.tmj#start": {
+            "scaleInDock": 1
         },
         "static/assets/tileset1.tsx": {
             "dynamicWrapping": false,
@@ -90,6 +96,8 @@
     "map.lastUsedFormat": "tmx",
     "map.width": 50,
     "openFiles": [
+        "static/assets/shitfuck.tmj",
+        "static/assets/savanna.tmx"
     ],
     "project": "hyene.tiled-project",
     "property.type": "bool",
