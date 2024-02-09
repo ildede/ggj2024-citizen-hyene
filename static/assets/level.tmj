@@ -4,7 +4,7 @@
      "export":
         {
          "format":"json",
-         "target":"shitfuck.json"
+         "target":"level.json"
         }
     },
  "height":90,

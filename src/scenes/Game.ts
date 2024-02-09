@@ -43,7 +43,7 @@ export default class Game extends Phaser.Scene {
         this.load.image('sptiyrshrry_hyrsy', 'assets/sptiyrshrry_hyrsy.png');
         this.load.image('start', 'assets/start.png');
         this.load.image('end', 'assets/end.png');
-        this.load.tilemapTiledJSON('tilemap', 'assets/shitfuck.json');
+        this.load.tilemapTiledJSON('tilemap', 'assets/level.json');
 
         this.load.image('oil', 'assets/oil.png');
         this.load.image('the', 'assets/the.png');
