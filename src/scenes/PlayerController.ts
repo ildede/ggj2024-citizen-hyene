@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import StateMachine from '../statemachine/StateMachine';
-import { GameEvents, eventEmitter } from './EventCenter';
+import { eventEmitter, GameEvents } from './EventCenter';
 import { GarbageName } from './GarbageController';
 import { WaterName } from './Water';
 import { JackName } from './Jack';
@@ -16,6 +16,7 @@ export default class PlayerController {
 
     private stateMachine: StateMachine;
     private entropy = 0;
+    private laughs: Phaser.Sound.BaseSound[] = [];
 
     private lastEnemy?: Phaser.Physics.Matter.Sprite;
     private headTimeout?: NodeJS.Timeout;
@@ -26,6 +27,9 @@ export default class PlayerController {
         this.head = head;
         this.cursors = cursors;
 
+        [1, 2, 3, 4, 5, 6].forEach((n) => {
+            this.laughs.push(scene.sound.add(`laugh${n}`, { loop: true }));
+        });
         this.createAnimations();
 
         this.stateMachine = new StateMachine(this, 'player');
@@ -159,10 +163,11 @@ export default class PlayerController {
 
     private setEntropy(value: number) {
         const newEntropy: number = Phaser.Math.Clamp(value, 0, MAX_ENTROPY);
+        const randomLaugh = this.laughs[Math.floor(Math.random() * this.laughs.length)];
         if (newEntropy > this.entropy) {
-            // Iena deve ridere di più
+            if (!randomLaugh.isPlaying) randomLaugh.play();
         } else {
-            // Iena deve ridere di meno
+            if (randomLaugh.isPlaying) randomLaugh.stop();
         }
         this.entropy = newEntropy;
         eventEmitter.emit(GameEvents.entropyUpdate, newEntropy);
