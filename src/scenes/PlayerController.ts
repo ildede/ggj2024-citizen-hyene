@@ -28,7 +28,10 @@ export default class PlayerController {
         this.cursors = cursors;
 
         [1, 2, 3, 4, 5, 6].forEach((n) => {
-            this.laughs.push(scene.sound.add(`laugh${n}`, { loop: true }));
+            this.laughs.push(scene.sound.add(`short-laugh-${n}`, { loop: true }));
+        });
+        [1, 2, 3].forEach((n) => {
+            this.laughs.push(scene.sound.add(`long-laugh-${n}`, { loop: true }));
         });
         this.createAnimations();
 

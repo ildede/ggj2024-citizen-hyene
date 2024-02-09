@@ -55,7 +55,8 @@ export default class Game extends Phaser.Scene {
         this.load.image(`${GarbageName}-off`, 'assets/trashcan_off.png');
 
         this.load.image('background', 'assets/background.png');
-        [1, 2, 3, 4, 5, 6].forEach((n) => this.load.audio(`laugh${n}`, `assets/sounds/sfx_laugh_short_${n}.wav`));
+        [1, 2, 3, 4, 5, 6].forEach((n) => this.load.audio(`short-laugh-${n}`, `assets/sounds/sfx_laugh_short_${n}.wav`));
+        [1, 2, 3].forEach((n) => this.load.audio(`long-laugh-${n}`, `assets/sounds/sfx_laugh_long_${n}.wav`));
     }
     create() {
         console.log(`[${SCENE_NAME}] create`);
