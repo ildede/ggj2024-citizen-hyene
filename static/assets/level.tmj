@@ -682,8 +682,8 @@
                  "type":"",
                  "visible":true,
                  "width":100,
-                 "x":840.099909173478,
-                 "y":476.793823796549
+                 "x":1612.12534059945,
+                 "y":472.252497729337
                 }, 
                 {
                  "height":100,
@@ -695,6 +695,17 @@
                  "width":100,
                  "x":1244.27792915531,
                  "y":476.793823796548
+                }, 
+                {
+                 "height":100,
+                 "id":19,
+                 "name":"watch",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":100,
+                 "x":853.723887375113,
+                 "y":454.08719346049
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -703,7 +714,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":19,
+ "nextobjectid":20,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

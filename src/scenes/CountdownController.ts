@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { eventEmitter, GameEvents } from './EventCenter';
 
 export default class CountdownController {
     private scene: Phaser.Scene;
@@ -10,6 +11,8 @@ export default class CountdownController {
     constructor(scene: Phaser.Scene, label: Phaser.GameObjects.Text) {
         this.scene = scene;
         this.label = label;
+
+        eventEmitter.on(GameEvents.timeCollected, this.handleTimeCollected, this);
     }
 
     start(callback: () => void, duration = 45000) {
@@ -40,5 +43,9 @@ export default class CountdownController {
         const seconds = remaining / 1000;
 
         this.label.text = `${seconds.toFixed(2)}`;
+    }
+
+    private handleTimeCollected(value: number) {
+        this.duration += value * 1000;
     }
 }

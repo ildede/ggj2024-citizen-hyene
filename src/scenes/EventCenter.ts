@@ -6,6 +6,7 @@ enum GameEvents {
     stomped = 'element-stomped',
     hit = 'element-hit',
     entropyUpdate = 'entropy-up',
+    timeCollected = 'time-collected',
     timerEnd = 'timer-end',
 }
 

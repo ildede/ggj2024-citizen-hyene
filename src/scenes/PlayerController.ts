@@ -138,6 +138,10 @@ export default class PlayerController {
 
                 case 'static': {
                     const elementName = sprite.getData('element');
+                    const elementTime: number = sprite.getData('time') ?? 0;
+                    if (elementTime) {
+                        eventEmitter.emit(GameEvents.timeCollected, elementTime);
+                    }
                     const elementEntropy: number = sprite.getData('entropy') ?? 0;
                     this.setEntropy(this.entropy + elementEntropy);
                     eventEmitter.emit(`${elementName}-${GameEvents.hit}`, sprite);

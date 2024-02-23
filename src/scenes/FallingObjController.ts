@@ -1,7 +1,7 @@
 import StateMachine from '../statemachine/StateMachine';
 import Controller from '../Controller';
 
-const INITIAL_VELOCITY = 15;
+const INITIAL_VELOCITY = 8;
 
 class FallingObjController implements Controller {
     private scene: Phaser.Scene;

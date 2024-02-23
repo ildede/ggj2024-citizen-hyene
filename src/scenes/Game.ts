@@ -2,11 +2,12 @@ import Phaser from 'phaser';
 import PlayerController from './PlayerController';
 import { GarbageController, GarbageName } from './GarbageController';
 import { EnemyController } from './EnemyController';
-import { FoodController } from './Food';
+import { EntropyController } from './EntropyController';
 import Controller from '../Controller';
 import { WaterController } from './Water';
 import { JackController } from './Jack';
 import { FallingObjController } from './FallingObjController';
+import { TimeController } from './TimeController';
 
 const SCENE_NAME = 'game';
 
@@ -49,6 +50,7 @@ export default class Game extends Phaser.Scene {
         this.load.image('oil', 'assets/oil.png');
         this.load.image('piano', 'assets/piano.png');
         this.load.image('iron', 'assets/iron.png');
+        this.load.image('watch', 'assets/watch.png');
         this.load.image('the', 'assets/the.png');
         this.load.image('banana', 'assets/banana.png');
         this.load.image('coffee', 'assets/coffee.png');
@@ -142,47 +144,47 @@ export default class Game extends Phaser.Scene {
                     break;
                 }
                 case 'garbage': {
-                    const garbage = this.createStaticElement(GarbageName, x, y, 10);
+                    const garbage = this.createStaticElement(GarbageName, x, y, { entropy: 10 });
                     this.elements.push(new GarbageController(this, garbage));
                     break;
                 }
                 case 'oil': {
-                    this.createStaticElement('oil', x, y, 10);
+                    this.createStaticElement('oil', x, y, { entropy: 10 });
                     break;
                 }
                 case 'the': {
-                    const food = this.createStaticElement('the', x, y, -5);
-                    this.elements.push(new FoodController(this, food, 'the'));
+                    const food = this.createStaticElement('the', x, y, { entropy: -5 });
+                    this.elements.push(new EntropyController(this, food, 'the'));
                     break;
                 }
                 case 'coffee': {
-                    const food = this.createStaticElement('coffee', x, y, 5);
-                    this.elements.push(new FoodController(this, food, 'coffee'));
+                    const food = this.createStaticElement('coffee', x, y, { entropy: 5 });
+                    this.elements.push(new EntropyController(this, food, 'coffee'));
                     break;
                 }
                 case 'gas_green': {
-                    const food = this.createStaticElement('gas_green', x, y, -10);
-                    this.elements.push(new FoodController(this, food, 'gas_green'));
+                    const food = this.createStaticElement('gas_green', x, y, { entropy: -10 });
+                    this.elements.push(new EntropyController(this, food, 'gas_green'));
                     break;
                 }
                 case 'gas_red': {
-                    const food = this.createStaticElement('gas_red', x, y, 10);
-                    this.elements.push(new FoodController(this, food, 'gas_red'));
+                    const food = this.createStaticElement('gas_red', x, y, { entropy: 10 });
+                    this.elements.push(new EntropyController(this, food, 'gas_red'));
                     break;
                 }
                 case 'pill': {
-                    const food = this.createStaticElement('pill', x, y, 15);
-                    this.elements.push(new FoodController(this, food, 'pill'));
+                    const food = this.createStaticElement('pill', x, y, { entropy: 15 });
+                    this.elements.push(new EntropyController(this, food, 'pill'));
                     break;
                 }
                 case 'banana': {
-                    const food = this.createStaticElement('banana', x, y, 10);
-                    this.elements.push(new FoodController(this, food, 'banana'));
+                    const food = this.createStaticElement('banana', x, y, { entropy: 10 });
+                    this.elements.push(new EntropyController(this, food, 'banana'));
                     break;
                 }
                 case 'roller': {
-                    const food = this.createStaticElement('roller', x, y, 10);
-                    this.elements.push(new FoodController(this, food, 'roller'));
+                    const food = this.createStaticElement('roller', x, y, { entropy: 10 });
+                    this.elements.push(new EntropyController(this, food, 'roller'));
                     break;
                 }
                 case 'water': {
@@ -227,6 +229,11 @@ export default class Game extends Phaser.Scene {
                     this.elements.push(new FallingObjController(this, element, 'iron'));
                     break;
                 }
+                case 'watch': {
+                    const watch = this.createStaticElement('watch', x, y, { time: 10 });
+                    this.elements.push(new TimeController(this, watch, 'watch'));
+                    break;
+                }
             }
         });
 
@@ -251,7 +258,7 @@ export default class Game extends Phaser.Scene {
         this.elements.forEach((element) => element.update(dt));
     }
 
-    private createStaticElement(name: string, x: number, y: number, entropy: number): Phaser.Physics.Matter.Sprite {
+    private createStaticElement(name: string, x: number, y: number, options?: { entropy?: number; time?: number }): Phaser.Physics.Matter.Sprite {
         const element = this.matter.add.sprite(x, y, name, undefined, {
             isStatic: true,
             isSensor: true,
@@ -259,7 +266,8 @@ export default class Game extends Phaser.Scene {
 
         element.setData('type', 'static');
         element.setData('element', name);
-        element.setData('entropy', entropy);
+        element.setData('entropy', options?.entropy ?? 0);
+        element.setData('time', options?.time ?? 0);
         return element;
     }
 }
