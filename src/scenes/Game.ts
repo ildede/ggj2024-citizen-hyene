@@ -6,6 +6,7 @@ import { FoodController } from './Food';
 import Controller from '../Controller';
 import { WaterController } from './Water';
 import { JackController } from './Jack';
+import { FallingObjController } from './FallingObjController';
 
 const SCENE_NAME = 'game';
 
@@ -46,6 +47,8 @@ export default class Game extends Phaser.Scene {
         this.load.tilemapTiledJSON('tilemap', 'assets/level.json');
 
         this.load.image('oil', 'assets/oil.png');
+        this.load.image('piano', 'assets/piano.png');
+        this.load.image('iron', 'assets/iron.png');
         this.load.image('the', 'assets/the.png');
         this.load.image('banana', 'assets/banana.png');
         this.load.image('coffee', 'assets/coffee.png');
@@ -204,6 +207,24 @@ export default class Game extends Phaser.Scene {
                     element.setData('element', name);
                     element.setData('entropy', 10);
                     this.elements.push(new JackController(this, element));
+                    break;
+                }
+                case 'piano': {
+                    const element = this.matter.add.sprite(x, y, 'piano', undefined, { isSensor: true }).setFixedRotation();
+                    element.setData('type', 'enemy');
+                    element.setData('entropy', 50);
+                    element.setData('element', 'piano');
+
+                    this.elements.push(new FallingObjController(this, element, 'piano'));
+                    break;
+                }
+                case 'iron': {
+                    const element = this.matter.add.sprite(x, y, 'iron', undefined, { isSensor: true }).setFixedRotation();
+                    element.setData('type', 'enemy');
+                    element.setData('entropy', 50);
+                    element.setData('element', 'iron');
+
+                    this.elements.push(new FallingObjController(this, element, 'iron'));
                     break;
                 }
             }
